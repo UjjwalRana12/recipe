@@ -2,4 +2,7 @@
     <string name="app_name">Recipe</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="discover_tasty_and_healthy_receipt">Discover tasty and healthy receipt</string>
+    <string name="hey_ujjwal">Hey Ujjwal</string>
+    <string name="popular_recipes">Popular Recipes</string>
 </resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/recipe_iv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/paneer"
+        android:scaleType="centerCrop"/>
+
+    <View
+        android:id="@+id/overlay"
+        android:layout_width="312dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="4dp"
+        android:background="#80000000"
+        app:layout_constraintBottom_toBottomOf="@+id/recipe_iv"
+        app:layout_constraintEnd_toEndOf="@+id/recipe_iv"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/recipe_iv"
+        app:layout_constraintTop_toBottomOf="@id/recipe_iv"
+        app:layout_constraintVertical_bias="0.225" />
+
+    <TextView
+        android:id="@+id/recipe_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@id/recipe_time"
+        app:layout_constraintEnd_toEndOf="@+id/recipe_iv"
+        app:layout_constraintStart_toStartOf="@+id/recipe_iv"
+        app:layout_constraintTop_toBottomOf="@id/overlay"/>
+
+    <TextView
+        android:id="@+id/recipe_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:text="TextView"
+        android:textSize="12sp"
+        android:textColor="@color/secondary_text_color"
+        app:layout_constraintBottom_toBottomOf="@+id/recipe_iv"
+        app:layout_constraintEnd_toEndOf="@+id/recipe_name"
+        app:layout_constraintStart_toStartOf="@+id/recipe_name"
+        app:layout_constraintTop_toBottomOf="@+id/recipe_name"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

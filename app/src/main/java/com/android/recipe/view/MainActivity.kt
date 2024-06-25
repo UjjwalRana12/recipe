@@ -1,15 +1,15 @@
-package com.android.recipe
+package com.android.recipe.view
 
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.android.recipe.R
 import com.android.recipe.databinding.ActivityMainBinding
-import com.android.recipe.fragment.Favourite
-import com.android.recipe.fragment.Home
+import com.android.recipe.view.fragment.Favourite
+import com.android.recipe.view.fragment.Home
 
 class MainActivity : AppCompatActivity() {
 
