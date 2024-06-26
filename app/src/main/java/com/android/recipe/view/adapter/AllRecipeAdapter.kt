@@ -13,6 +13,7 @@ import com.bumptech.glide.Glide
 
 class AllRecipeAdapter(private val list: List<RecipeItem>) : RecyclerView.Adapter<AllRecipeAdapter.ItemViewHolder>() {
 
+    var onItemClick:((RecipeItem)->Unit)? = null
     class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val recipeImage:ImageView=itemView.findViewById(R.id.recipeImage)
         val recipeName: TextView = itemView.findViewById(R.id.recipetvname)
@@ -35,6 +36,10 @@ class AllRecipeAdapter(private val list: List<RecipeItem>) : RecyclerView.Adapte
 //            .into(holder.recipeImage)
 
         holder.recipeImage.setImageResource(currentItem.imageUrl)
+
+        holder.itemView.setOnClickListener {
+        onItemClick?.invoke(currentItem)
+        }
     }
 
     override fun getItemCount() = list.size

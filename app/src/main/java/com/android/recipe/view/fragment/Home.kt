@@ -1,5 +1,6 @@
 package com.android.recipe.view.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.recipe.R
 import com.android.recipe.model.RecipeItem
+import com.android.recipe.view.RecipeView
 import com.android.recipe.view.adapter.AllRecipeAdapter
 import com.android.recipe.view.adapter.RecipeAdapter
 
@@ -46,6 +48,11 @@ class Home : Fragment() {
         val allRecyclerView = view.findViewById<RecyclerView>(R.id.all_recycler_view)
         allRecyclerView.layoutManager=LinearLayoutManager(context)
         allRecyclerView.adapter=allRecipeAdapter
+
+        allRecipeAdapter.onItemClick={
+            val intent=Intent(requireContext(),RecipeView::class.java)
+            startActivity(intent)
+        }
 
     }
 }
